@@ -1,0 +1,19 @@
+.page-category {
+    .zone--timeline {
+        .story {
+            &__thumb {
+                float: none;
+                width: 100%;
+                margin-bottom: 0.625rem;
+            }
+
+            &__thumb {
+                @include respond-above(sm) {
+                    margin-bottom: 0;
+                    float: left;
+                    width: 200px;
+                }
+            }
+        }
+    }
+}

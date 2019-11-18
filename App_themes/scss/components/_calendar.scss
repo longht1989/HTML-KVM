@@ -1,0 +1,535 @@
+/* calendar global */
+.calendar-short {
+    .header {
+        margin-bottom: 0.5rem;
+
+        .week {
+            opacity: 0.5;
+            font-weight: bold;
+        }
+    }
+
+    .title {
+        position: relative;
+        text-align: center;
+
+        h2 {
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+
+        .selector {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+
+            &.next {
+                left: auto;
+                right: 0;
+            }
+        }
+
+    }
+
+    .week {
+        font-size: 0;
+        margin-bottom: 0.5rem;
+
+        .day {
+            width: 14.2%;
+            font-size: 0.875rem;
+            line-height: 2.14;
+            display: inline-block;
+            text-align: center;
+
+            &-number {
+                display: inline-block;
+                border-radius: 50%;
+                width: 29px;
+                height: 29px;
+                line-height: 29px;
+            }
+
+            .event-listing {
+                position: absolute;
+                width: 300px;
+                bottom: 100%;
+                left: 0;
+                transform: translateX(-50%);
+                display: none;
+                z-index: 2;
+                padding-bottom: 0.5rem;
+
+                ul {
+                    border: 1px solid #eee;
+                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .11);
+                    background: #fff;
+                    padding: 0.5rem 1rem 0.5rem 0;
+                    text-align: left;
+                    margin-bottom: 0px;
+                    list-style-type: none;
+
+                    li {
+                        margin-left: 1rem;
+                        margin-bottom: 0;
+                        position: relative;
+                        padding-left: 1rem;
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            width: 6px;
+                            height: 6px;
+                            position: absolute;
+                            top: 14px;
+                            left: 0;
+                            margin-top: -3px;
+                            border-radius: 50%;
+                        }
+
+                        &+li {
+                            margin-top: 0.75rem;
+                        }
+                    }
+                }
+
+                &::before {
+                    display: none;
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 10px solid white;
+                    position: absolute;
+                    bottom: 3px;
+                    left: 50%;
+                    margin-left: 8px;
+                }
+            }
+
+            &.event {
+                &-done {
+                    cursor: pointer;
+
+                    .day {
+                        &-number {
+                            background-color: $blue;
+                            color: white;
+                        }
+                    }
+
+                    ul {
+                        li {
+                            &::before {
+                                background-color: $blue
+                            }
+                        }
+                    }
+                }
+
+                &-active {
+                    cursor: pointer;
+
+                    .day {
+                        &-number {
+                            background-color: $green;
+                            color: white;
+                        }
+                    }
+
+                    ul {
+                        li {
+                            &::before {
+                                background-color: $green
+                            }
+                        }
+                    }
+                }
+
+                &-next {
+                    cursor: pointer;
+
+                    .day {
+                        &-number {
+                            border: 1px solid $blue;
+                            color: $blue;
+                        }
+                    }
+
+                    ul {
+                        li {
+                            &::before {
+                                background-color: white;
+                                border: 1px solid $blue;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.has-event {
+                position: relative;
+
+                &:hover {
+                    .event-listing {
+                        display: block;
+
+                        &::before {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            &.out {
+                .day-number {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    .content {
+        .week {
+            .day {
+                &:last-child {
+                    color: #FF5353;
+                }
+            }
+        }
+    }
+
+}
+
+.calendar-note {
+    margin-top: 1rem;
+
+    p {
+        padding-left: 1rem;
+        position: relative;
+        margin: 0.5rem 0 0;
+        font-size: 0.75rem;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -4px;
+        }
+    }
+
+    .event {
+        &-active {
+
+            &::before {
+                background-color: $green;
+            }
+        }
+
+        &-done {
+
+            &::before {
+                background-color: $blue;
+            }
+        }
+
+        &-next {
+
+            &::before {
+                border: 1px solid $blue;
+            }
+        }
+    }
+}
+
+.calendar {
+    &-list {
+        border: 1px solid #ddd;
+
+        .title {
+            font-size: 1rem;
+            display: block;
+            padding: 0.625rem;
+            background: #F2F2F2;
+            margin-bottom: -0px;
+
+            &::after {
+                display: none;
+            }
+
+            .date {
+                float: right;
+            }
+        }
+
+        .day {
+            &+.day {
+                border-top: 1px solid #ddd;
+            }
+
+            .event {
+                border-top: 1px solid #ddd;
+                padding: 0.625rem;
+                display: flex;
+
+                &:hover {
+                    background: #fafafa;
+                }
+            }
+
+            .time {
+                flex-basis: 30%;
+                font-weight: bold;
+
+                @media screen and (min-width: 768px) {
+                    flex-basis: 20%;
+                }
+            }
+
+            .detail {
+                font-size: 1rem;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.calendar-full {
+    border: 1px solid #ddd;
+
+    .week {
+        font-size: 0;
+
+        .day {
+            width: 14.285%;
+            font-size: 0.875rem;
+            line-height: 2.14;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+
+            &+.day {
+                border-left: 1px solid #ddd;
+            }
+
+            &.today {
+                background-color: #FCF8E3;
+            }
+
+            &-number {
+                display: inline-block;
+            }
+
+            &.has-event {
+                position: relative;
+
+                &:hover {
+                    .event-listing {
+                        display: block;
+
+                        &::before {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .event-listing {
+                position: absolute;
+                bottom: 0.25rem;
+                left: 0;
+                right: 0;
+                z-index: 2;
+                padding: 0 0.5rem;
+                max-height: 46px;
+                overflow: hidden;
+
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    text-align: left;
+                    list-style-type: none;
+
+                    li {
+                        margin-bottom: 0;
+                        font-size: 0.75rem;
+                        line-height: 1.4;
+                        max-height: 1.6em;
+                        overflow: hidden;
+                        padding: 0.15rem 0.25rem;
+
+                        &+li {
+                            margin-top: 0.5rem;
+                        }
+
+                        a {
+                            color: #fff;
+                            display: block;
+
+                            &:hover {
+                                color: #ddd;
+                            }
+                        }
+                    }
+                }
+
+                @media screen and(min-width: 768px) {
+                    max-height: 74px;
+                }
+            }
+
+            &.event-done {
+                .event-listing {
+                    ul {
+                        li {
+                            background-color: $blue;
+                        }
+                    }
+                }
+            }
+
+            &.event-active {
+                .event-listing {
+                    ul {
+                        li {
+                            background-color: $green;
+                        }
+                    }
+                }
+            }
+
+            &.event-next {
+                .event-listing {
+                    ul {
+                        li {
+                            border: 1px solid $blue;
+
+                            a {
+                                color: darken($blue, 15%);
+
+                                &:hover {
+                                    color: $green;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.out {
+                .day-number {
+                    opacity: 0.5;
+                }
+            }
+
+            &:hover {
+                background-color: #f0f0f0;
+            }
+        }
+    }
+
+    .header {
+        .day {
+            font-weight: bold;
+        }
+    }
+
+    .content {
+        .day {
+            text-align: right;
+            padding: 0.5rem 0.5rem 3rem;
+            border-top: 1px solid #ddd;
+
+            &.out {
+                color: #bbb;
+            }
+
+            &:last-child {
+                color: #FF5353;
+
+                &.out {
+                    color: #fbadad;
+                }
+            }
+
+            @media screen and(min-width: 768px) {
+                padding-bottom: 5rem;
+            }
+
+        }
+    }
+}
+
+.zone--calendar {
+    .zone {
+        &__header {}
+
+        &__title {
+            padding-top: 0;
+            margin: auto;
+            display: none;
+            font-size: 1.125rem;
+            line-height: 2.375rem;
+
+            &::before {
+                display: none;
+            }
+
+            &.active {
+                display: block;
+            }
+
+            @media screen and(min-width: 768px) {
+                text-align: center;
+            }
+        }
+
+        &__selector {
+            text-align: right;
+
+            @media screen and(min-width: 768px) {
+                text-align: left;
+            }
+        }
+
+        &__nav {
+            flex-basis: 100%;
+        }
+    }
+
+    .nav-tabs {
+        border-bottom: none;
+        margin-top: 1rem;
+
+        @media screen and(min-width: 768px) {
+            margin-top: 0;
+        }
+
+        &>a {
+            padding: 0.5rem 0.625rem;
+            background-color: #f0f0f0;
+
+            &:hover,
+            &:focus {
+                color: black;
+                background-color: darken($yellow, 10%);
+            }
+
+            &.active {
+                background-color: $yellow;
+
+            }
+        }
+
+        @media screen and(min-width: 768px) {
+            justify-content: flex-end;
+        }
+    }
+}

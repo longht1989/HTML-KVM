@@ -1,0 +1,317 @@
+/* story global */
+.story {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+        box-sizing: border-box;
+    }
+
+    &__thumb {
+        margin-bottom: 0.625rem;
+        overflow: hidden;
+        text-align: center;
+
+        img {
+            transition: all 0.2s ease-in-out;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__header {}
+
+    &__footer {
+        margin-top: 1rem;
+
+        .text {
+            a {
+                color: $green;
+                font-size: 0.675rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .story {
+            .story__title {
+                font-size: 1.25rem;
+
+                &::before {
+                    display: inline;
+                    content: '';
+                    font-family: 'Font Awesome 5 Pro';
+                    font-size: 0.5em;
+                    font-weight: bold;
+                    margin-right: 0.5rem;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 0;
+        font-weight: bold;
+        font-size: 1.125rem;
+        line-height: 1.3;
+
+        @include respond-above(md) {
+            font-size: 1.25rem;
+        }
+
+        &+.story__summary {
+            margin-top: 1rem;
+        }
+    }
+
+    &__summary,
+    &__meta {
+        font-size: 0.875rem;
+        opacity: 0.5;
+        margin-top: 0.625rem;
+    }
+
+    &__summary {
+        opacity: 0.8;
+        font-size: 1rem;
+    }
+
+    &__cate {
+        margin-bottom: 0.5rem;
+
+        &>a,
+        &>span {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 0.5rem;
+            background-color: $green;
+            color: white;
+
+            .fas {
+                font-size: 1.2rem;
+            }
+
+            &:hover {
+                background-color: darken($green, 5%);
+            }
+        }
+    }
+
+    &--rank {
+        .story {
+            &__header {
+                padding-left: 50px;
+                position: relative;
+            }
+
+            &__order {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #fff;
+                background-color: $blue;
+                font-size: 1.25rem;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                text-align: center;
+            }
+        }
+    }
+
+    &:hover {
+        .story {
+            &__thumb {
+                img {
+                    // transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    &+.story {
+        margin-top: 1.5rem;
+    }
+
+    &--highlight {
+        .story {
+            &__title {
+                font-size: 1.5rem;
+
+                @include respond-above(md) {
+                    font-size: 1.875rem;
+                }
+
+                @include respond-above(lg) {
+                    font-size: 2.25rem;
+                }
+            }
+        }
+    }
+
+    &--featured {
+        .story {
+            &__title {
+                font-size: 1.125rem;
+
+                @include respond-above(md) {
+                    font-size: 1.25rem;
+                }
+
+                @include respond-above(lg) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            &__summary {
+                @include respond-between(md, lg) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &--left {
+        .story {
+            &__thumb {
+                width: 120px;
+                float: left;
+                margin-right: 0.625rem;
+                margin-bottom: 0;
+                text-align: center;
+            }
+
+            &__header {
+                overflow: hidden;
+            }
+        }
+
+        &.cover {
+            .story {
+                &__thumb {
+                    width: 50%;
+                    margin-right: 2rem;
+                }
+
+                &__title {
+                    text-transform: uppercase;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+
+    &--border {
+        &+.story--border {
+            padding-top: 1rem;
+            border-top: 1px dashed #ddd;
+        }
+    }
+
+    &--mask {
+        .story {
+            &__summary {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            position: relative;
+
+            .story {
+                &__thumb {
+                    margin-bottom: 0;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0rem;
+                        bottom: 0rem;
+                        right: 0rem;
+                        left: 0rem;
+                        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+                    }
+                }
+
+                &__header {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    padding: 1.5rem;
+                }
+
+                &__title {
+                    a {
+                        color: #fff;
+
+                        &:hover {
+                            color: #ccc;
+                        }
+                    }
+                }
+
+                &__summary {
+                    color: #fff;
+                }
+            }
+        }
+
+        @include respond-above(lg) {
+            .story__summary {
+                display: block;
+            }
+        }
+    }
+
+    &.has-bg {
+        background-color: #F0F0EC;
+
+        &>.story__header {
+            padding: 0 1rem;
+        }
+
+        &>.story__footer {
+            margin-top: 0;
+            padding: 1rem;
+        }
+    }
+
+    &.has-video {}
+
+    &.has-image {}
+
+    .slider & {
+        &+.story {
+            margin-top: 0rem;
+        }
+    }
+
+    .area--cover & {
+        .story__title {
+            font-size: 1.25rem;
+
+            a {
+                color: white;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            @media screen and(min-width: 1024px) {
+                font-size: 1.875rem;
+            }
+        }
+    }
+}

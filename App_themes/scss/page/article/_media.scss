@@ -1,0 +1,29 @@
+.page {
+    &-media {
+        .column {
+            &-main {
+                float: none;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .detail {
+            &__footer {
+                padding-bottom: 1rem;
+            }
+
+            &__credit {
+                color: white;
+
+                &::before {
+                    background-color: white;
+                }
+            }
+
+            &__social {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

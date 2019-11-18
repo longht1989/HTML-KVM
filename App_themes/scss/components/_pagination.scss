@@ -1,0 +1,22 @@
+.page-link {
+    margin-left: 0.5rem;
+    min-width: 24px;
+
+    &:hover {}
+
+    &:focus {}
+}
+
+.page-item {
+    &:first-child {
+        .page-link {
+            border-radius: 0;
+        }
+    }
+
+    &:last-child {
+        .page-link {
+            border-radius: 0;
+        }
+    }
+}

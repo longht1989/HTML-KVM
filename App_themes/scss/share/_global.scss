@@ -1,0 +1,77 @@
+[aria-expanded="false"] {
+    .short {
+        display: none;
+    }
+}
+
+[aria-expanded="true"] {
+    .full {
+        display: none;
+    }
+
+    .short {
+        display: block;
+    }
+}
+
+.modal.show .modal-dialog {
+    -webkit-transform: translate(0, 20%);
+    transform: translate(0, 20%);
+}
+
+a.btn {
+    cursor: pointer;
+    &:not([href]):not([tabindex]) {
+        color: white;
+    }
+}
+
+.btn-round {
+    border-radius: 30px;
+    min-width: 100px;
+}
+
+h2,
+h3 {
+    &.title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 0.625rem;
+        margin-bottom: 1rem;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 4px;
+            background-color: $secondary;
+        }
+    }
+}
+
+h2.title {
+    font-size: 2rem;
+}
+
+.form-control {
+    &.error {
+        border: 1px solid red;
+
+        &~.error {
+            font-size: 0.875rem;
+            margin-bottom: 0;
+            color: red;
+        }
+    }
+}
+
+.grecaptcha-badge {
+    visibility: collapse !important;
+    display: none !important;
+}
