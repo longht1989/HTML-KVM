@@ -179,6 +179,49 @@
             z-index: 3;
         }
 
+        .tools {
+            .site-header__tools {
+                display: flex;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+                a {
+                    &.is-active {
+                        background-color: darken($blue, 10%);
+                    }
+                }
+
+                .input-wrap {
+                    background-color: darken($blue, 5%);
+                    width: 80%;
+                    margin-left: auto;
+
+                    .fal {
+                        color: white;
+
+                        &:hover {
+                            color: $yellow;
+                        }
+                    }
+
+                    .form-control {
+                        color: white;
+
+                    }
+
+                    ::placeholder {
+                        /* Chrome, Firefox, Opera, Safari 10.1+ */
+                        color: white;
+                        opacity: 1;
+                        /* Firefox */
+                    }
+                }
+            }
+
+            @include respond-above(lg) {
+                display: none;
+            }
+        }
+
         @include respond-above(lg) {
             display: flex;
             margin-left: 0;

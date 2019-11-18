@@ -2,12 +2,11 @@
     padding: 0;
     background-color: white;
     border-radius: 0;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 1.5rem;
     align-items: center;
-    font-family: 'Roboto', Arial, "Helvetica Neue", Helvetica, sans-serif;
 
     .btn {
         font-size: 0.875rem;
@@ -25,8 +24,8 @@
 
     &.active {
         color: black;
-        border-bottom: 4px solid $yellow;
-        padding-bottom: 0.5rem;
+        border-bottom: 4px solid $blue;
+        padding-bottom: 0.25rem;
     }
 
     &+.active {
@@ -36,5 +35,13 @@
     h1 {
         font-size: 1.125rem;
         margin: 0;
+    }
+
+    a {
+        color: #555;
+
+        &:hover {
+            color: $blue;
+        }
     }
 }

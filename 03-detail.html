@@ -12,33 +12,35 @@
     <link href="App_themes/fonts/fontawesome-pro-5.8.2-web/css/all.min.css" rel="stylesheet">
     <!-- Customise css -->
     <link rel="stylesheet" href="App_themes/css/main.css?v=1.0">
-    <title>TTBC HCM - Category</title>
+    <title>KVM- Category</title>
 </head>
 
-<body class="page-category">
-    <div class="wrapper">
-        <header class="site-header" id="site-header">
-            <div class="site-header__topbar">
-                <span>Hotline:<a href="tel:+84357216216"> (+84) 357.216.216</a></span>
-                <div class="language float-right">
-                    <a href=""><img class="img-fluid" src="App_themes/images/lang-vi.png" alt="Tiếng Việt" title="Tiếng Việt"></a>
-                    <a href=""><img class="img-fluid" src="App_themes/images/lang-en.png" alt="English" title="English"></a>
-                </div>
-            </div>
+<body class="page-detail">
+    <header class="site-header" id="site-header">
+        <div class="wrapper">
             <div class="site-header__content">
-                <h1 class="logo"><a href="01-homepage.html"><img class="img-fluid" src="App_themes/images/logo.png" alt="Trung tâm báo chí TP.Hồ Chí Minh" title="Trung tâm báo chí TP.Hồ Chí Minh"></a></h1>
-                <div class="banner"><img class="img-fluid" src="App_themes/images/header-banner.png" alt="Trung tâm báo chí TP.Hồ Chí Minh" title="Trung tâm báo chí TP.Hồ Chí Minh"></div>
+                <h1 class="logo"><a href="01-homepage.html"><img class="img-fluid" src="App_themes/images/logo.png" data-src="App_themes/images/logo-mobile.png" alt="KV MAP" title="KV MAP"></a></h1>
                 <span class="btn-expand" href="#">
                     <i class="fal fa-bars"></i>
                     <i class="fal fa-times"></i>
                 </span>
+                <div class="site-header__tools">
+                    <div class="language">
+                        <a href=""><img class="img-fluid" src="App_themes/images/lang-kr.png" alt="Korean" title="Korean"> English</a>
+                        <a class="is-active" href=""><img class="img-fluid" src="App_themes/images/lang-vi.png" alt="Tiếng Việt" title="Tiếng Việt"> Tiếng Việt</a>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" class="form-control" placeholder="Nội dung tìm kiếm">
+                        <a href="#" class="fal fa-search"></a>
+                    </div>
+                </div>
             </div>
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-home"></i></a>
+                    <a class="nav-link" href="#">Tin tức</a>
                 </li>
                 <li class="nav-item is-active">
-                    <a class="nav-link" href="02-category.html">Tin tức</a>
+                    <a class="nav-link" href="02-category.html">Khảo sát - rà phá</a>
                     <ul class="nav-sub">
                         <li class="nav-item"><a href="02-category.html" class="nav-link">Tin tức nội bộ</a></li>
                         <li class="nav-item"><a href="02-category.html" class="nav-link">Tin tức TP. Hồ Chí Minh</a></li>
@@ -46,44 +48,30 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="02-category.html">Thông cáo báo chí</a>
+                    <a class="nav-link" href="02-category.html">giáo dục - Tuyên truyền</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="02-category.html">sự kiện</a>
+                    <a class="nav-link" href="02-category.html">Hỗ trợ nạn nhân</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="02-category.html">đào tạo</a>
+                    <a class="nav-link" href="02-category.html">Quản lý thông tin</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="02-category.html">diễn đàn</a>
+                    <a class="nav-link" href="02-category.html">Hợp tác quốc tế</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="02.1-category-multimedia.html">MultiMEDIA</a>
-                </li>
-                <li class="nav-item ml-auto nav-search">
-                    <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-                    <div class="nav-sub search-wrap">
-                        <div class="input-wrap">
-                            <input type="text" class="form-control">
-                            <a href="#" class="fal fa-search"></a>
-                        </div>
-                    </div>
+                    <a class="nav-link" href="02.1-category-multimedia.html">Thư viện hình ảnh</a>
                 </li>
             </ul>
-            <div class="breaking">
-                <h2 class="breaking__label">Theo dòng sự kiện:</h2>
-                <ul class="breaking__listing">
-                    <li class="breaking__item"><a href="02-category.html">Cháy Công ty Rạng Đông</a></li>
-                    <li class="breaking__item"><a href="02-category.html">Cháy Công ty Rạng Đông</a></li>
-                    <li class="breaking__item"><a href="02-category.html">Cháy Công ty Rạng Đông</a></li>
-                </ul>
-            </div>
-        </header>
-        <main class="site-content">
+        </div>
+    </header>
+    <main class="site-content">
+        <div class="container">
             <div class="column-wrap">
                 <div class="column-main">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="01-homepage.html">Trang chủ</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Tin tức</li>
                         </ol>
                     </nav>
@@ -93,7 +81,7 @@
                             <div class="detail__meta">20:00 08-Oct-2019</div>
                             <div class="detail__summary">Sau một loạt những hình ảnh rò rỉ và một số teaser nhá hàng, hãng xe Hàn Quốc Kia đã chính thức vén màn mẫu Seltos 2020. Mẫu SUV này đã được trưng bày tại một sự kiện đặc biệt ở Delhi (Ấn Độ) và sẽ được mở bán vào nửa cuối năm nay.</div>
                             <figure class="detail__avatar">
-                                <img src="images/1376x574.png" alt="" class="img-fluid">
+                                <img src="images/800x450-1.jpg" alt="" class="img-fluid">
                                 <figcaption>Kia seltos 2020 ra mắt, thêm lựa chọn suv cỡ nhỏ mớI cho giớI trẻ</figcaption>
                             </figure>
                         </header>
@@ -121,29 +109,6 @@
                                 <img src="https://source.unsplash.com/300x400/?car/?sig=39" alt="" data-zoom-src="https://source.unsplash.com/1920x1080/?car/?sig=0" data-zoomable>
                             </div>
                             <p>Di chuyển vào khoang cabin, người lái được chào đón bằng hệ thống thông tin giải trí với màn hình cảm ứng cỡ lớn 10,25 inch đặt ở giữa bảng điều khiển và hệ thống đèn trang trí nội thất Sound Mood Lighting. Ngoài ra, khách hàng có thể mua thêm tùy chọn màn hình HUD 8 inch, hệ thống âm thanh cao cấp Bose với 8 loa và một số trang bị khác để biến nội thất của Kia Seltos 2020 trở nên tiện nghi và thoải mái như trong phòng khách.</p>
-                            <div class="detail__extension-wrap">
-                                <h3 class="title">Sự kiện liên quan</h3>
-                                <div class="detail__extension">
-                                    <i class="fal fa-clock"></i>
-                                    <p><b>Thời gian</b></p>
-                                    <p>08:00 - 10:00, 06-Oct-2019</p>
-                                </div>
-                                <div class="detail__extension">
-                                    <i class="fal fa-map-marker-alt"></i>
-                                    <p><b>Địa điểm</b></p>
-                                    <p>Bảo tàng Hà Nội, đường Phạm Hùng, Mễ Trì, Mỹ Đình, Hà Nội</p>
-                                </div>
-                                <div class="detail__extension">
-                                    <i class="fal fa-chalkboard-teacher"></i>
-                                    <p><b>Nhà tổ chức</b></p>
-                                    <p>The Factory</p>
-                                </div>
-                                <div class="detail__extension">
-                                    <i class="fal fa-users"></i>
-                                    <p><b>Số lượng</b></p>
-                                    <p>500 người</p>
-                                </div>
-                            </div>
                             <p>Di chuyển vào khoang cabin, người lái được chào đón bằng hệ thống thông tin giải trí với màn hình cảm ứng cỡ lớn 10,25 inch đặt ở giữa bảng điều khiển và hệ thống đèn trang trí nội thất Sound Mood Lighting. Ngoài ra, khách hàng có thể mua thêm tùy chọn màn hình HUD 8 inch, hệ thống âm thanh cao cấp Bose với 8 loa và một số trang bị khác để biến nội thất của Kia Seltos 2020 trở nên tiện nghi và thoải mái như trong phòng khách.</p>
                             <div class="quotes">
                                 <p>Theo thống kế của Tổng cục Hải quan, năm 2017, Việt Nam nhập từ Nga 542 xe ô tô các loại trị giá 28,9 triệu USD. Năm 2018, con số này giảm chỉ còn 393 xe các loại, trị giá 29,6 triệu USD. Trong 6 tháng đầu năm 2019, Việt Nam nhập từ Nga 549 xe ô tô các loại trị giá 46,6 triệu USD.</p>
@@ -185,7 +150,7 @@
                                 <p class="source">Theo Autodaily</p>
                                 <p class="author">James Doe</p>
                             </div>
-                            <div class="detail__social"><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=124&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId" width="124" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
+                            <div class="detail__social"><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=124&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId" width="300" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
                         </div>
                         <footer class="detail__footer">
                             <section class="zone">
@@ -194,21 +159,21 @@
                                 </header>
                                 <div class="zone__content">
                                     <article class="story story--left">
-                                        <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/300x226.png" alt=""></a></figure>
+                                        <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/120x90-1.jpg" alt=""></a></figure>
                                         <div class="story__header">
                                             <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
                                             <div class="story__meta">08 Oct 2019</div>
                                         </div>
                                     </article>
                                     <article class="story story--left">
-                                        <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/300x226.png" alt=""></a></figure>
+                                        <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/120x90-2.jpg" alt=""></a></figure>
                                         <div class="story__header">
                                             <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
                                             <div class="story__meta">08 Oct 2019</div>
                                         </div>
                                     </article>
                                     <article class="story story--left">
-                                        <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/300x226.png" alt=""></a></figure>
+                                        <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/120x90-3.jpg" alt=""></a></figure>
                                         <div class="story__header">
                                             <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
                                             <div class="story__meta">08 Oct 2019</div>
@@ -224,7 +189,7 @@
                         </header>
                         <div class="zone__content">
                             <div class="row">
-                                <div class="col-4 mb-3">
+                                <div class="col-sm-6 col-md-4 mb-3">
                                     <article class="story">
                                         <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/640x360-1.jpg" alt=""></a></figure>
                                         <div class="story__header">
@@ -232,7 +197,7 @@
                                         </div>
                                     </article>
                                 </div>
-                                <div class="col-4 mb-3">
+                                <div class="col-sm-6 col-md-4 mb-3">
                                     <article class="story">
                                         <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/640x360-1.jpg" alt=""></a></figure>
                                         <div class="story__header">
@@ -240,7 +205,7 @@
                                         </div>
                                     </article>
                                 </div>
-                                <div class="col-4 mb-3">
+                                <div class="col-sm-6 col-md-4 mb-3">
                                     <article class="story">
                                         <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/640x360-1.jpg" alt=""></a></figure>
                                         <div class="story__header">
@@ -248,7 +213,7 @@
                                         </div>
                                     </article>
                                 </div>
-                                <div class="col-4 mb-3">
+                                <div class="col-sm-6 col-md-4 mb-3">
                                     <article class="story">
                                         <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/640x360-1.jpg" alt=""></a></figure>
                                         <div class="story__header">
@@ -256,7 +221,7 @@
                                         </div>
                                     </article>
                                 </div>
-                                <div class="col-4 mb-3">
+                                <div class="col-sm-6 col-md-4 mb-3">
                                     <article class="story">
                                         <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/640x360-1.jpg" alt=""></a></figure>
                                         <div class="story__header">
@@ -264,7 +229,7 @@
                                         </div>
                                     </article>
                                 </div>
-                                <div class="col-4 mb-3">
+                                <div class="col-sm-6 col-md-4 mb-3">
                                     <article class="story">
                                         <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/640x360-1.jpg" alt=""></a></figure>
                                         <div class="story__header">
@@ -315,93 +280,9 @@
                             </article>
                         </div>
                     </section>
-                    <!-- event calendar -->
-                    <section class="zone">
-                        <div class="zone__content">
-                            <img src="images/event-calendar.png" alt="" class="img-fluid" style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);">
-                            <div class="mt-3 clearfix">
-                                <button class="btn btn-sm btn-round btn-success"><i class="fal fa-calendar mr-1"></i> Xem lịch đầy đủ</button>
-                                <button class="btn btn-sm btn-round btn-primary float-right"><i class="fal fa-edit mr-1"></i> Đăng ký sự kiện</button>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- forum -->
-                    <section class="zone">
-                        <header class="zone__header">
-                            <h2 class="zone__title"><a href="02-category.html">Diễn đàn</a></h2>
-                        </header>
-                        <div class="zone__content">
-                            <article class="story story--left story--border">
-                                <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/300x226.png" alt=""></a></figure>
-                                <div class="story__header">
-                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
-                                </div>
-                            </article>
-                            <article class="story story--left story--border">
-                                <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/300x226.png" alt=""></a></figure>
-                                <div class="story__header">
-                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
-                                </div>
-                            </article>
-                            <article class="story story--left story--border">
-                                <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/300x226.png" alt=""></a></figure>
-                                <div class="story__header">
-                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
-                                </div>
-                            </article>
-                            <article class="story story--left story--border">
-                                <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/300x226.png" alt=""></a></figure>
-                                <div class="story__header">
-                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
-                                </div>
-                            </article>
-                            <article class="story story--left story--border">
-                                <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/300x226.png" alt=""></a></figure>
-                                <div class="story__header">
-                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
                     <div class="qc">
                         <a href="#"><img src="images/ads/300x250.jpg" alt="" class="img-fluil"></a>
                     </div>
-                    <div class="qc">
-                        <a href="#"><img src="images/ads/300x250.jpg" alt="" class="img-fluil"></a>
-                    </div>
-                    <section class="zone">
-                        <header class="zone__header">
-                            <h2 class="zone__title"><a href="02-category.html">Tin Trung Ương</a></h2>
-                        </header>
-                        <div class="zone__content">
-                            <article class="story story--border">
-                                <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/640x360.jpg" alt=""></a></figure>
-                                <div class="story__header">
-                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
-                                </div>
-                            </article>
-                            <article class="story story--border">
-                                <div class="story__header">
-                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
-                                </div>
-                            </article>
-                            <article class="story story--border">
-                                <div class="story__header">
-                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
-                                </div>
-                            </article>
-                            <article class="story story--border">
-                                <div class="story__header">
-                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
-                                </div>
-                            </article>
-                            <article class="story story--border">
-                                <div class="story__header">
-                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
-                                </div>
-                            </article>
-                        </div>
-                    </section>
                     <section class="zone">
                         <header class="zone__header">
                             <h2 class="zone__title"><a href="02-category.html">Tin TP.HCM </a></h2>
@@ -435,58 +316,61 @@
                             </article>
                         </div>
                     </section>
-                </div>
-            </div>
-        </main>
-        <footer class="site-footer" id="site-footer">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="logo">
-                        <a href="01-homepage.html" class="float-left"><img class="img-fluid" src="App_themes/images/logo.png" alt="Trung tâm báo chí TP.Hồ Chí Minh" title="Trung tâm báo chí TP.Hồ Chí Minh"></a>
-                        <p><a href="01-homepage.html"><b class="text-primary">TRUNG TÂM BÁO CHÍ THÀNH PHỐ HỒ CHÍ MINH</b><br>
-                                <span class="text-muted">HOCHIMINH CITY MEDIA CENTER (HMC)</span></a></p>
-                    </div>
-                    <div class="site-footer__info mt-4">
-                        <p class="text-wrap">
-                            <span class="far fa-building"></span>
-                            <span class="text">Cao ốc 255 Trần Hưng Đạo, Phường Cô Giang, Quận 1, TP.Hồ Chí Minh
-                                Building 255 Tran Hung Dao Street, Co Giang Ward, District 1, Ho Chi Minh City
-                            </span>
-                        </p>
-                        <p class="text-wrap">
-                            <span class="far fa-phone"></span>
-                            <span class="text">ĐT: <a href="tel:+842822216216">(+84-28) 22 216 216</a> - Hotline: <a href="tel:+842822216216">(+84) 357 216 216</a></span>
-                        </p>
-                        <p class="text-wrap">
-                            <span class="far fa-envelope"></span>
-                            <span class="text"> <a href="mailto:trungtambaochi@tphcm.gov.vn"><b>trungtambaochi@tphcm.gov.vn</b></a><br>
-                                <a href="#"><b>ttbc-hcm.gov.vn</b></a></span>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-3 mt-sm-0">
-                    <h3 class="title">LIÊN HỆ</h3>
-                    <div class="row">
-                        <div class="col-6">
-                            <input type="text" class="form-control mb-4" placeholder="Họ và tên">
-                        </div>
-                        <div class="col-6">
-                            <input type="mail" class="form-control mb-4" placeholder="Email">
-                        </div>
-                        <div class="col-12">
-                            <textarea id="" rows="5" class="form-control mb-4" placeholder="Nội dung liên hệ"></textarea>
-                            <button class="float-right btn btn-primary btn-round">Gửi</button>
-                        </div>
+                    <div class="qc">
+                        <a href="#"><img src="images/ads/300x250.jpg" alt="" class="img-fluil"></a>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </main>
+    <footer class="site-footer" id="site-footer">
+        <div class="site-footer__nav">
+            <div class="container">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="02-category.html">Giáo dục - Tuyên truyền</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="02-category.html">Hỗ trợ nạn nhân</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="02-category.html">Quản lý thông tin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="02-category.html">Hợp tác quốc tế</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="02.1-category-multimedia.html">Thư viện hình ảnh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link"><i class="fal fa-search"></i></a>
+                        <div class="nav-sub">
+                            <div class="input-wrap">
+                                <input type="text" class="form-control" placeholder="Nội dung tìm kiếm">
+                                <a href="#" class="fal fa-search"></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-footer__info">
+            <div class="text-center text-white">
+                <p class="font-weight-bold">© Trang tin điện tử Trung tâm hành động bom mìn quốc gia Việt Nam.</p>
+                <p>Giấy phép số 289/GP-TTĐT ngày 13 tháng 11 năm 2018 - Cục Phát Thanh, Truyền Hình và thông tin điện tử - Bộ Thông tin và Truyền thông.</p>
+                <p>Văn phòng: Xã Thạch Hoà, huyện Thạch Thất, thành phố Hà Nội | Tel: +84 (0) 2466643001 | Fax: +84 (0) 2466643002 | Email: office504.uxo@gmail.com</p>
+                <p>Bản quyền thuộc Trang tin điện tử Trung tâm hành động bom mìn quốc gia Việt Nam.</p>
+                <p>Trưởng ban biên tập: TS Nguyễn Hạnh Phúc</p>
+            </div>
+        </div>
+    </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="App_themes/js/vendor/jquery.min.js"></script>
     <script src="App_themes/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
     <script src="App_themes/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-    <script src="App_themes/js/vendor/jquery.bxslider.min.js"></script>
     <script src="App_themes/js/app.js?v=1.0"></script>
 </body>
 

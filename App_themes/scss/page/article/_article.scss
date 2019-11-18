@@ -3,6 +3,22 @@
 // ====================================
 
 // Note: wrap all article'elements exept sidebar
+.page-detail {
+    .site-content {
+        margin-top: 2rem;
+
+        .zone {
+            &__title {
+                text-align: left;
+
+                @include respond-above(xl) {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
 .detail {
     &-wrap {
         margin-bottom: 3rem;
@@ -546,9 +562,7 @@
         margin-top: 1.5rem;
 
         .zone {
-            &__title {
-                font-size: 1.125rem;
-            }
+            &__title {}
         }
     }
 }
