@@ -62,11 +62,47 @@
     }
 }
 
+
+.zone--analyst {
+    .display-4 {
+        @include respond-below(md) {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.zone--link {
+    .alert-link {
+        @include respond-below(md) {
+            font-size: 0.75rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        &.has-img {
+            position: relative;
+
+            .img-fluid {
+                position: absolute;
+                right: 0.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
 .link-website {
     .btn {
         width: 20%;
         text-align: center;
 
+        @include respond-below(md) {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            font-size: 0.625rem;
+        }
     }
 }
 
