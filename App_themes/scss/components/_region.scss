@@ -381,6 +381,7 @@
         margin-bottom: 3.5rem;
     }
 
+    &--contact,
     &--featured,
     &--cover {
         background: url(../images/cover-bg.png) #0C2A4B center center no-repeat;
@@ -456,7 +457,32 @@
     &--featured {
         padding: 2rem 0px;
         background-image: url('../images/video-bg.png');
+    }
 
+    &--contact {
+        padding: 6rem 0 3rem;
+        background-color: #0c2a4b;
+        background-image: url('../images/contact-bg.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        @include respond-above(lg) {
+            padding: 14rem 0 3rem;
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .text {
+            margin-bottom: 3rem;
+            color: white;
+            text-align: center;
+        }
     }
 
     .story {
