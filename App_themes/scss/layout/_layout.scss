@@ -36,7 +36,7 @@
     .story-listing {
         .story {
             .story__header {
-                padding: 0 1rem;
+                padding: 1rem;
             }
 
             @include respond-above(md) {
@@ -47,13 +47,9 @@
                 &+.story {
                     margin-top: 0;
                 }
-
-                .story__header {
-                    padding: 1rem;
-                }
             }
 
-            @include respond-above(lg) {
+            @include respond-above(xl) {
                 .story__header {
                     padding: 1.5rem;
                 }
@@ -61,8 +57,6 @@
         }
     }
 }
-
-
 .zone--analyst {
     .display-4 {
         @include respond-below(md) {

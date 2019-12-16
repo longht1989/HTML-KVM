@@ -40,7 +40,7 @@
 
         .story {
             .story__title {
-                font-size: 1.25rem;
+                font-size: 1rem;
 
                 &::before {
                     display: inline;
@@ -87,19 +87,28 @@
 
         &>a,
         &>span {
-            font-size: 0.875rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             display: inline-block;
-            padding: 0.5rem;
             background-color: $green;
             color: white;
+            padding: 0.25rem 0.5rem;
 
             .fas {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
 
             &:hover {
                 background-color: darken($green, 5%);
+            }
+
+            @include respond-above(xl) {
+                font-size: 0.875rem;
+                padding: 0.5rem;
+
+                .fas {
+                    font-size: 1.2rem;
+                }
             }
         }
     }
@@ -164,7 +173,7 @@
                     font-size: 1.25rem;
                 }
 
-                @include respond-above(lg) {
+                @include respond-above(xl) {
                     font-size: 1.5rem;
                 }
             }
@@ -215,6 +224,8 @@
     }
 
     &--mask {
+        position: relative;
+
         .story {
             &__summary {
                 display: none;
@@ -222,21 +233,21 @@
         }
 
         @media screen and (min-width: 768px) {
-            position: relative;
-
             .story {
                 &__thumb {
                     margin-bottom: 0;
 
-                    &::after {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        top: 0rem;
-                        bottom: 0rem;
-                        right: 0rem;
-                        left: 0rem;
-                        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+                    a {
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 0rem;
+                            bottom: 0rem;
+                            right: 0rem;
+                            left: 0rem;
+                            background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+                        }
                     }
                 }
 
@@ -264,9 +275,41 @@
             }
         }
 
-        @include respond-above(lg) {
+        @include respond-above(xl) {
             .story__summary {
                 display: block;
+            }
+        }
+    }
+
+    &--video {
+        .story__thumb {
+            position: relative;
+
+            a {
+                &::after {
+                    display: block;
+                    content: '';
+                    font-family: 'Font Awesome 5 Pro';
+                    font-weight: lighter;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    font-size: 3rem;
+                    transform: translate(-50%, -50%);
+                    color: white;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                &:hover {
+                    &::after {
+                        color: #ccc;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 1280px) {
+                position: static;
             }
         }
     }
@@ -308,6 +351,81 @@
 
             @media screen and(min-width: 1024px) {
                 font-size: 1.875rem;
+            }
+        }
+    }
+
+    .zone--full &,
+    .zone--video & {
+        &.story--mask {
+            .story__thumb {
+                position: relative;
+            }
+
+            .story__header {
+                position: static;
+                padding: 1rem 0 0;
+
+            }
+
+            .story__title {
+                a {
+                    color: #000;
+
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+
+            .story__summary {
+                display: block;
+                color: #000;
+            }
+
+            @include respond-above(xl) {
+                .story {
+                    &__thumb {
+                        margin-bottom: 0;
+                        position: static;
+
+                        a {
+                            &::before {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                top: 0rem;
+                                bottom: 0rem;
+                                right: 0rem;
+                                left: 0rem;
+                                background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+                            }
+                        }
+                    }
+
+                    &__header {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        padding: 1.5rem;
+                    }
+
+                    &__title {
+                        a {
+                            color: #fff;
+
+                            &:hover {
+                                color: #ccc;
+                            }
+                        }
+                    }
+
+                    &__summary {
+                        display: none;
+                        color: #fff;
+                    }
+                }
             }
         }
     }
