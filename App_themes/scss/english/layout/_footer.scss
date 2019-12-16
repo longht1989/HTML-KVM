@@ -1,0 +1,16 @@
+.site-footer {
+    &__nav {
+        .nav-link {
+            @include respond-above(lg) {
+                letter-spacing: -0.6px;
+                font-size: 0.75rem;
+            }
+
+            @include respond-above(xl) {
+                padding: 1rem 0.5rem;
+                font-size: 0.875rem;
+                letter-spacing: 0;
+            }
+        }
+    }
+}
