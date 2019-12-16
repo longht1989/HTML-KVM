@@ -1,0 +1,14 @@
+.site-header {
+    .nav {
+        &-link {
+            @include respond-above(lg) {
+                letter-spacing: -0.6px;
+            }
+
+            @include respond-above(xl) {
+                padding: 0.75rem 0.5rem;
+                letter-spacing: 0;
+            }
+        }
+    }
+}
