@@ -71,6 +71,10 @@
                     height: 0.75rem;
                 }
             }
+
+            @media screen and (min-width:1024px) {
+                letter-spacing: -1.3px;
+            }
         }
     }
 

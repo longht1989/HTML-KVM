@@ -1,6 +1,6 @@
 .site-header {
     .nav {
-        &-link {
+        .nav-link {
             @include respond-above(lg) {
                 letter-spacing: -0.6px;
             }
