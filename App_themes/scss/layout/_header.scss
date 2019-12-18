@@ -64,10 +64,16 @@
             .img-fluid {
                 height: 100%;
                 width: auto;
+                max-height: 36px;
+                vertical-align: text-bottom;
             }
 
             @include respond-above(lg) {
                 height: 62px;
+
+                .img-fluid {
+                    max-height: initial;
+                }
             }
         }
 
