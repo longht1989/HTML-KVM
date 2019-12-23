@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="App_themes/images/favico.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="App_themes/bootstrap-4.3.1-dist/css/bootstrap.css">
+    <!-- Fonts -->
+    <link href="App_themes/fonts/fontawesome-pro-5.8.2-web/css/all.min.css" rel="stylesheet">
+    <!-- Customise css -->
+    <link rel="stylesheet" href="App_themes/css/main.css?v=1.0">
+    <title>KV MAP - Category</title>
+</head>
+
+<body class="page-category">
+    <header class="site-header" id="site-header">
+        <div class="wrapper">
+            <div class="site-header__content">
+                <h1 class="logo"><a href="01-homepage.html"><img class="img-fluid" src="App_themes/images/logo.png" data-src="App_themes/images/logo-mobile.png" alt="KV MAP" title="KV MAP"></a></h1>
+                <span class="btn-expand" href="#">
+                    <i class="fal fa-bars"></i>
+                    <i class="fal fa-times"></i>
+                </span>
+                <div class="site-header__tools">
+                    <div class="language">
+                        <a href=""><img class="img-fluid" src="App_themes/images/lang-kr.png" alt="Korean" title="Korean"> English</a>
+                        <a class="is-active" href=""><img class="img-fluid" src="App_themes/images/lang-vi.png" alt="Tiếng Việt" title="Tiếng Việt"> Tiếng Việt</a>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" class="form-control" placeholder="Nội dung tìm kiếm">
+                        <a href="#" class="fal fa-search"></a>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tin tức</a>
+                </li>
+                <li class="nav-item is-active">
+                    <a class="nav-link" href="02-category.html">Khảo sát - rà phá</a>
+                    <ul class="nav-sub">
+                        <li class="nav-item"><a href="02-category.html" class="nav-link">Tin tức nội bộ</a></li>
+                        <li class="nav-item"><a href="02-category.html" class="nav-link">Tin tức TP. Hồ Chí Minh</a></li>
+                        <li class="nav-item"><a href="02-category.html" class="nav-link">Tin Trung Ương</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="02-category.html">giáo dục - Tuyên truyền</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="02-category.html">Hỗ trợ nạn nhân</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="02-category.html">Quản lý thông tin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="02-category.html">Hợp tác quốc tế</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="02.1-category-multimedia.html">Thư viện hình ảnh</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="site-content">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="01-homepage.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Văn bản</li>
+                </ol>
+            </nav>
+            <div class="column-wrap">
+                <div class="column-main">
+                    <section class="zone">
+                        <div class="zone__content">
+                            <!-- table tool -->
+                            <div class="table-tool">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-4 mb-3">
+                                        <label for="documentType">Loại văn bản</label>
+                                        <select id="documentType" name="documentType" class="form-control form-control-sm">
+                                            <option value="All">All</option>
+                                            <option value="Type 1">Type 1</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4 mb-3">
+                                        <label for="documentType">Loại văn bản</label>
+                                        <select id="documentType" name="documentType" class="form-control form-control-sm">
+                                            <option value="All">All</option>
+                                            <option value="Type 1">Type 1</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="search-wrap">
+                                            <label for="documentSearch">Tìm kiếm</label>
+                                            <input type="text" class="form-control form-control-sm" id="documentSearch" placeholder="Keywords ...">
+                                            <a href="#" class="btn-search"><i class="fal fa-search"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- table content -->
+                            <div class="table-responsive">
+                                <table id="documentTable" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%" role="grid" style="width: 100%;">
+                                    <thead>
+                                        <tr role="row">
+                                            <th aria-controls="dataTable" rowspan="1" colspan="1">Type</th>
+                                            <th aria-controls="dataTable" rowspan="1" colspan="1">Date</th>
+                                            <th aria-controls="dataTable" rowspan="1" colspan="1" width="60%">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr role="row" class="odd">
+                                            <td>Tokyo</td>
+                                            <td>2008/11/28</td>
+                                            <td><a href="#" class="text-link">Accountant</a></td>
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td>London</td>
+                                            <td>2009/10/09</td>
+                                            <td><a href="#" class="text-link">Chief Executive Officer (CEO)</a></td>
+                                        </tr>
+                                        <tr role="row" class="odd">
+                                            <td>San Francisco</td>
+                                            <td>2009/01/12</td>
+                                            <td><a href="#" class="text-link">Junior Technical Author</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="zone__footer">
+                            <nav class="" aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#"><span class="far fa-angle-left"></span></a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"><span class="far fa-angle-right"></span></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </section>
+                </div>
+                <div class="column-sidebar">
+                    <!-- most view -->
+                    <section class="zone">
+                        <header class="zone__header">
+                            <h2 class="zone__title"><a href="02-category.html">Đọc nhiều</a></h2>
+                        </header>
+                        <div class="zone__content">
+                            <article class="story story--rank">
+                                <div class="story__header">
+                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
+                                    <div class="story__order">1</div>
+                                </div>
+                            </article>
+                            <article class="story story--rank">
+                                <div class="story__header">
+                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
+                                    <div class="story__order">1</div>
+                                </div>
+                            </article>
+                            <article class="story story--rank">
+                                <div class="story__header">
+                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
+                                    <div class="story__order">1</div>
+                                </div>
+                            </article>
+                            <article class="story story--rank">
+                                <div class="story__header">
+                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
+                                    <div class="story__order">1</div>
+                                </div>
+                            </article>
+                            <article class="story story--rank">
+                                <div class="story__header">
+                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
+                                    <div class="story__order">1</div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <div class="qc">
+                        <a href="#"><img src="images/ads/300x250.jpg" alt="" class="img-fluil"></a>
+                    </div>
+                    <section class="zone">
+                        <header class="zone__header">
+                            <h2 class="zone__title"><a href="02-category.html">Tin TP.HCM </a></h2>
+                        </header>
+                        <div class="zone__content">
+                            <article class="story story--border">
+                                <figure class="story__thumb"><a href="03-detail.html"><img class="img-fluid" src="images/640x360.jpg" alt=""></a></figure>
+                                <div class="story__header">
+                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
+                                </div>
+                            </article>
+                            <article class="story story--border">
+                                <div class="story__header">
+                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
+                                </div>
+                            </article>
+                            <article class="story story--border">
+                                <div class="story__header">
+                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
+                                </div>
+                            </article>
+                            <article class="story story--border">
+                                <div class="story__header">
+                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
+                                </div>
+                            </article>
+                            <article class="story story--border">
+                                <div class="story__header">
+                                    <h3 class="story__title"><a href="03-detail.html">Chủ doanh nghiệp dọa nhà báo ở Sóc Trăng: 'Tôi mất bình tĩnh'</a></h3>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <div class="qc">
+                        <a href="#"><img src="images/ads/300x250.jpg" alt="" class="img-fluil"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer" id="site-footer">
+        <div class="site-footer__nav">
+            <div class="container">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="02-category.html">Giáo dục - Tuyên truyền</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="02-category.html">Hỗ trợ nạn nhân</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="02-category.html">Quản lý thông tin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="02-category.html">Hợp tác quốc tế</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="02.1-category-multimedia.html">Thư viện hình ảnh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link"><i class="fal fa-search"></i></a>
+                        <div class="nav-sub">
+                            <div class="input-wrap">
+                                <input type="text" class="form-control" placeholder="Nội dung tìm kiếm">
+                                <a href="#" class="fal fa-search"></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-footer__info">
+            <div class="text-center text-white">
+                <p class="font-weight-bold">© Trang tin điện tử Trung tâm hành động bom mìn quốc gia Việt Nam.</p>
+                <p>Giấy phép số 289/GP-TTĐT ngày 13 tháng 11 năm 2018 - Cục Phát Thanh, Truyền Hình và thông tin điện tử - Bộ Thông tin và Truyền thông.</p>
+                <p>Văn phòng: Xã Thạch Hoà, huyện Thạch Thất, thành phố Hà Nội | Tel: +84 (0) 2466643001 | Fax: +84 (0) 2466643002 | Email: office504.uxo@gmail.com</p>
+                <p>Bản quyền thuộc Trang tin điện tử Trung tâm hành động bom mìn quốc gia Việt Nam.</p>
+                <p>Trưởng ban biên tập: TS Nguyễn Hạnh Phúc</p>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="App_themes/js/vendor/jquery.min.js"></script>
+    <script src="App_themes/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="App_themes/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="App_themes/js/app.js?v=1.0"></script>
+</body>
+
+</html>

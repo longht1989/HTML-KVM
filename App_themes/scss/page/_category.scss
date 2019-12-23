@@ -21,3 +21,16 @@
         }
     }
 }
+
+.table-tool {
+    margin-bottom: 1rem;
+    .search-wrap {
+        position: relative;
+
+        .btn-search {
+            position: absolute;
+            right: 8px;
+            bottom: 5px;
+        }
+    }
+}
