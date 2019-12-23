@@ -73,11 +73,16 @@
 
         @include respond-above(lg) {
             display: flex;
+
+            .nav-link {
+                font-size: 0.75rem;
+            }
         }
 
         @include respond-above(xl) {
             .nav-link {
-                padding: 1rem;
+                // letter-spacing: -0.5px;
+                // padding: 1rem;
             }
         }
     }
