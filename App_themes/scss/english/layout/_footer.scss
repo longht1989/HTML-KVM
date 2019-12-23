@@ -1,13 +1,28 @@
 .site-footer {
     &__nav {
+        .nav-item {
+            @include respond-above(lg) {
+                font-size: 0.75rem;
+
+                &+.nav-item {
+                    margin-left: 1px;
+                }
+            }
+
+            @include respond-above(xl) {
+                font-size: 0.825rem;
+            }
+        }
+
         .nav-link {
             @include respond-above(lg) {
+                text-transform: none;
                 letter-spacing: -0.6px;
+                padding: 0.75rem 0.5rem;
                 font-size: 0.75rem;
             }
 
             @include respond-above(xl) {
-                padding: 1rem 0.5rem;
                 font-size: 0.875rem;
                 letter-spacing: 0;
             }

@@ -1,12 +1,28 @@
 .site-header {
     .nav {
-        .nav-link {
+        .nav-item {
             @include respond-above(lg) {
-                letter-spacing: -0.6px;
+                text-transform: none;
+                font-size: 0.75rem;
+
+                &+.nav-item {
+                    margin-left: 1px;
+                }
             }
 
             @include respond-above(xl) {
+                font-size: 0.825rem;
+            }
+        }
+
+        .nav-link {
+            @include respond-above(lg) {
                 padding: 0.75rem 0.5rem;
+                letter-spacing: -0.4px;
+            }
+
+            @include respond-above(xl) {
+                padding: 0.75rem;
                 letter-spacing: 0;
             }
         }
