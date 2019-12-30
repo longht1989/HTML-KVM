@@ -1,0 +1,16 @@
+/* zone style */
+.zone {
+
+    &--light {
+        .zone {
+            &__title {
+                @media screen and(min-width: 1024px) {
+                    font-size: 1.25rem;
+                    text-transform: none;
+                    letter-spacing: -1px;
+                }
+            }
+        }
+    }
+
+}
