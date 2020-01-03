@@ -58,18 +58,18 @@
         padding: 0.5rem 0;
 
         .logo {
-            height: 40px;
-            margin: 0 0 0 1.25rem;
+            height: 50px;
+            margin: 0;
 
             .img-fluid {
                 height: 100%;
                 width: auto;
-                max-height: 36px;
+                max-height: 50px;
                 vertical-align: text-bottom;
             }
 
             @include respond-above(lg) {
-                height: 62px;
+                height: 80px;
 
                 .img-fluid {
                     max-height: initial;
