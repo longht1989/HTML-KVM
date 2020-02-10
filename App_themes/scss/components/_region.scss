@@ -341,6 +341,17 @@
         }
     }
 
+    &--analyst,
+    &--alink {
+        margin-bottom: 1rem;
+
+        .zone__header {
+            @include respond-above(md) {
+                margin-bottom: 1.25rem;
+            }
+        }
+    }
+
     .area & {
         margin-bottom: 0;
 
